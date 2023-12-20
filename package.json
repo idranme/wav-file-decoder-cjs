@@ -1,0 +1,25 @@
+{
+    "name": "wav-file-decoder-cjs",
+    "description": "A simple decoder for WAV audio files",
+    "version": "1.0.3",
+    "main": "lib/index.cjs",
+    "typings": "lib/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/idanran/wav-file-decoder-cjs.git"
+    },
+    "license": "MIT",
+    "files": [
+        "lib"
+    ],
+    "scripts": {
+        "compile": "esbuild src/index.ts --outfile=lib/index.cjs --bundle --platform=node --target=es2022",
+        "build": "yarn compile && node scripts/dts.js"
+    },
+    "devDependencies": {
+        "esbuild": "^0.19.10",
+        "typescript": "^5.3.3",
+        "wav-file-decoder": "^1.0.3"
+    },
+    "packageManager": "yarn@4.0.2"
+}
